@@ -1,0 +1,232 @@
+:root {
+    --main-color:#094143;
+    --bg-box:#FFFDFD;
+    --bg:#FCF8F5;
+    --img:#16585C;
+    --box-shadow:#196568;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: var(--main-color);
+}
+
+html, body {
+    min-height: 100vh;
+    height: auto;
+}
+
+html {
+    background-color: var(--bg);
+}
+
+input:focus {
+    outline: none;
+}
+
+#register-container {
+    max-width: 900px;
+    min-height: 80vh;
+    border-radius: 25px;
+    margin: 2rem auto;
+    display: flex;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+#register-banner {
+    background: url('../img/bg-form.jpg');
+    background-size:cover;
+    background-position: center;
+    width: 50%;
+    border-radius: 25px;
+}
+
+#banner-layer{
+    background-color: rgb(22, 88, 92, 0.9);
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#register-banner h1 {
+    font-size: 4rem;
+    margin-bottom:1.5rem;
+    color: #FFFDFD;
+    word-spacing: 50rem;
+}
+
+#register-form {
+    background-color: var(--bg-box);
+    padding: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+}
+
+#register-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+#register-form p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label{ 
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+
+.form-control input {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 0.6rem 0;
+    background-color: var(--bg-box);
+}
+
+#open-generate-password {
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#open-generate-password:hover {
+    color: #32999e;
+}
+
+#register-form #generated-password {
+    border: 1px solid #32999e;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+
+#register-form #generated-password p {
+    color: #889E33;
+    margin-bottom: 0.5rem;
+}
+
+#register-form input[type="submit"],
+#generate-options button,
+#copy-password {
+    background-color: var(--main-color);
+    color: #fff;
+    opacity: 0.7;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 1.4rem;
+    cursor: pointer;
+    max-width: 150px;
+    align-self: flex-end;
+    transition: 0.4s;
+}
+
+#register-form input[type="submit"]:hover {
+    opacity: 1;
+}
+
+
+
+#copy-password:hover {
+    opacity: 1;
+}
+
+/* Segunda versão */
+#generate-options {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+#generate-options .form-control {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#generate-options label {
+    font-size: 0.8rem;
+}
+
+#generate-options input[type="text"] {
+    max-width: 30px;
+    text-align:center;
+    border: 1px solid #ccc;
+}
+
+
+#generate-options button {
+    background-color: #32999e;
+    display: block;
+    margin: 0 auto;
+    opacity: 1;
+}
+
+#copy-password {
+    margin: 1rem auto;
+    background-color: transparent;
+    border: 2px solid #889E33;
+    color: #889E33;
+    padding: 0.5rem 1rem;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 400px){
+
+    #register-container {
+    border-radius: 25px;
+    margin: 0.9rem;
+    display: flex;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+    #banner-layer, #register-banner{
+        display: none;
+    }
+
+    #register-form {
+        background-color: var(--bg-box);
+        padding: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 25px;
+    }
+
+    #register-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+}
