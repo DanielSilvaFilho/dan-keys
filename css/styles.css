@@ -201,7 +201,7 @@ input:focus {
 
 
 
-@media screen and (max-width: 1170px){
+@media screen and (max-width: 400px){
 
     #register-container {
     border-radius: 25px;
